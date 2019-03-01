@@ -34,7 +34,7 @@ before_deploy:
 deploy:
   provider: script
   on:
-    branch: master
+    branch: test-travis
   script:
     docker push ${CLAIR_LOCAL_SCAN_IMAGE}:${CLAIR_VERSION}_${TRAVIS_COMMIT} &&
     docker push $CLAIR_LOCAL_SCAN_IMAGE:latest && 
